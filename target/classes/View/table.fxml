@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<TableView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="669.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+  <columns>
+    <TableColumn prefWidth="75.0" text="Группа">
+         <columns>
+            <TableColumn prefWidth="75.0" text="Фамилия" />
+         </columns></TableColumn>
+    <TableColumn prefWidth="75.0" text="Дата">
+         <columns>
+            <TableColumn prefWidth="40.0" text="1" />
+            <TableColumn prefWidth="40.0" text="2" />
+            <TableColumn prefWidth="40.0" text="3" />
+            <TableColumn prefWidth="40.0" text="4" />
+            <TableColumn prefWidth="40.0" text="5" />
+            <TableColumn prefWidth="40.0" text="6" />
+            <TableColumn prefWidth="40.0" text="7" />
+            <TableColumn prefWidth="40.0" text="8" />
+            <TableColumn prefWidth="40.0" text="9" />
+            <TableColumn prefWidth="40.0" text="10" />
+            <TableColumn prefWidth="40.0" text="11" />
+            <TableColumn prefWidth="40.0" text="12" />
+            <TableColumn prefWidth="40.0" text="13" />
+            <TableColumn prefWidth="40.0" text="14" />
+         </columns></TableColumn>
+  </columns>
+</TableView>

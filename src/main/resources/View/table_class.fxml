@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TableClassController">
+   <children>
+      <TabPane prefHeight="585.0" prefWidth="780.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="tab_1" text="Журнал успеваемости">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane fx:id="panelUp" layoutX="-1.0" layoutY="1.0" prefHeight="80.0" prefWidth="780.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ComboBox fx:id="cbNumber" layoutX="14.0" layoutY="40.0" prefHeight="25.0" prefWidth="91.0" promptText="Номер" visibleRowCount="5" />
+                              <Label layoutX="14.0" layoutY="14.0" text="Номера класса:" />
+                              <Label layoutX="111.0" layoutY="14.0" text="Буква класса" />
+                              <ComboBox fx:id="cbLetter" layoutX="111.0" layoutY="40.0" prefHeight="25.0" prefWidth="78.0" promptText="Буква" />
+                              <Label layoutX="201.0" layoutY="14.0" prefHeight="17.0" prefWidth="49.0" text="Предмет" />
+                              <ComboBox fx:id="cbLesson" layoutX="201.0" layoutY="41.0" prefHeight="25.0" prefWidth="118.0" promptText="Предмет" />
+                              <Label layoutX="326.0" layoutY="15.0" text="ФИО преподавателя" />
+                              <ComboBox fx:id="cbFIO" layoutX="326.0" layoutY="41.0" prefHeight="25.0" prefWidth="139.0" promptText="ФИО" />
+                              <Button fx:id="btnAply" layoutX="582.0" layoutY="40.0" mnemonicParsing="false" onAction="#OnAply" text="Выполнить" />
+                              <ComboBox fx:id="cbMonth" layoutX="472.0" layoutY="41.0" prefHeight="25.0" prefWidth="103.0" promptText="Месяц" />
+                              <Label layoutX="491.0" layoutY="15.0" text="Месяц" />
+                           </children>
+                           <effect>
+                              <SepiaTone />
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane fx:id="tab_1_AnctorPane" layoutX="14.0" layoutY="80.0" prefHeight="396.0" prefWidth="780.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0" />
+                        <AnchorPane fx:id="panel_bott" layoutX="7.0" layoutY="474.0" prefHeight="82.0" prefWidth="780.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                           <children>
+                              <HBox layoutX="632.0" layoutY="36.0">
+                                 <children>
+                                    <Button fx:id="btn_bott_save" layoutX="652.0" layoutY="36.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="86.0" text="СОХРАНИТЬ" textFill="#b29f54" AnchorPane.rightAnchor="62.0" />
+                                    <Button fx:id="btn_boot_cancel" layoutX="718.0" layoutY="36.0" mnemonicParsing="false" onAction="#clearPar" />
+                                 </children>
+                              </HBox>
+                              <TextField fx:id="tf_bottom_fam" layoutX="18.0" layoutY="36.0" prefHeight="25.0" prefWidth="168.0" AnchorPane.leftAnchor="18.0" />
+                              <Label layoutX="77.0" layoutY="15.0" text="Фамилия" />
+                              <TextField fx:id="tf_bottom_name" layoutX="208.0" layoutY="36.0" />
+                              <Label layoutX="271.0" layoutY="15.0" text="Имя" />
+                              <Label layoutX="422.0" layoutY="15.0" text="Дата оценки" />
+                              <DatePicker fx:id="dp_bot_opin" layoutX="390.0" layoutY="36.0" prefHeight="25.0" prefWidth="134.0" />
+                              <Label layoutX="559.0" layoutY="15.0" text="Оценка :" />
+                              <TextField fx:id="tf_bottom_opin" layoutX="544.0" layoutY="36.0" prefHeight="25.0" prefWidth="78.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Управление записями">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="82.0" layoutY="28.0" prefHeight="494.0" prefWidth="650.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                           <children>
+                              <VBox layoutX="33.0" layoutY="37.0" AnchorPane.leftAnchor="33.0">
+                                 <children>
+                                    <ImageView fitHeight="153.0" fitWidth="134.0" layoutX="100.0" layoutY="278.0" onMouseClicked="#onAdd_lesson" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/lesson.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="81.0" layoutY="447.0" text="Добавление нового предмета" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="281.0" layoutY="38.0" AnchorPane.leftAnchor="281.0" AnchorPane.rightAnchor="302.0">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="377.0" layoutY="37.0" onMouseClicked="#onAdd_teacher" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/teacher.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="377.0" layoutY="200.0" text="Добавление нового учителя" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="515.0" layoutY="38.0">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="89.0" layoutY="37.0" onMouseClicked="#onAdd_Schoolboy" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/add_schoolbay.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="85.0" layoutY="200.0" text="Добавление нового ученика" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

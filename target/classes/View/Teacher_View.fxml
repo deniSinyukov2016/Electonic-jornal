@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="302.0" prefWidth="476.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Teacher_controller">
+   <children>
+      <Label layoutX="29.0" layoutY="27.0" text="Фамилия" />
+      <Label layoutX="29.0" layoutY="61.0" text="Имя" />
+      <Label layoutX="29.0" layoutY="99.0" text="Отчество" />
+      <Label layoutX="29.0" layoutY="135.0" text="Должность" />
+      <TextField fx:id="tf_fam" layoutX="103.0" layoutY="23.0" prefHeight="25.0" prefWidth="194.0" />
+      <TextField fx:id="tf_name" layoutX="103.0" layoutY="57.0" prefHeight="25.0" prefWidth="194.0" />
+      <TextField fx:id="tf_patr" layoutX="103.0" layoutY="95.0" prefHeight="25.0" prefWidth="194.0" />
+      <ImageView fitHeight="171.0" fitWidth="151.0" layoutX="303.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/teach.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="311.0" layoutY="235.0" mnemonicParsing="false" onAction="#on_addTeacher" prefHeight="48.0" prefWidth="151.0" text="ДОБАВИТЬ" />
+      <TextArea fx:id="tf_post" layoutX="106.0" layoutY="135.0" prefHeight="106.0" prefWidth="194.0" />
+   </children>
+</AnchorPane>
